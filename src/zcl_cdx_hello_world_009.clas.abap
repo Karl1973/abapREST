@@ -11,7 +11,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_cdx_hello_world_009 IMPLEMENTATION.
+CLASS ZCL_CDX_HELLO_WORLD_009 IMPLEMENTATION.
 
 
   METHOD if_http_service_extension~handle_request.
@@ -35,5 +35,4 @@ CLASS zcl_cdx_hello_world_009 IMPLEMENTATION.
                               i_reason = 'Bad request').
     ENDCASE.
   ENDMETHOD.
-
 ENDCLASS.

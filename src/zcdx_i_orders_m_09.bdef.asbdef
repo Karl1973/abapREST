@@ -1,0 +1,12 @@
+managed; // implementation in class zbp_cdx_i_orders_m_09 unique;
+
+define behavior for ZCDX_I_ORDERS_M_09 alias order
+persistent table ZCDX_ORDER_00
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+}
