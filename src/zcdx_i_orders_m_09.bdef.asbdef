@@ -1,7 +1,7 @@
-managed; // implementation in class zbp_cdx_i_orders_m_09 unique;
+managed implementation in class zbp_cdx_i_orders_m_09 unique;
 
 define behavior for ZCDX_I_ORDERS_M_09 alias order
-persistent table ZCDX_ORDER_00
+persistent table zcdx_order_00
 lock master
 //authorization master ( instance )
 //etag master <field_name>
@@ -9,4 +9,10 @@ lock master
   create;
   update;
   delete;
+
+  field (features: instance) currency_code;
+
+  validation validateCustomer on save { field customer; }
+  validation validateDates on save { field order_date; }
+
 }
